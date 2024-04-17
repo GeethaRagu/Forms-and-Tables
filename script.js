@@ -11,9 +11,10 @@ myform.addEventListener("submit", (e) => {
   const state = document.getElementById("state").value;
   const country = document.getElementById("country").value;
 
-  const parentdiv = document.getElementById("tableview");
+  //const parentdiv = document.getElementById("tableview");
+  const table = document.getElementById("mytable");
   const title = document.createElement("h2");
-  const table = document.createElement("table");
+  //const table = document.createElement("table");
   const thead = document.createElement("thead");
   const tbody = document.createElement("tbody");
   const trow1 = document.createElement("tr");
@@ -35,8 +36,8 @@ myform.addEventListener("submit", (e) => {
   const tdata7 = document.createElement("td");
   const tdata8 = document.createElement("td");
 
-  table.id = "mytable";
-  table.classList.add("table", "table-sm","border","border-2","border-dark");
+  //table.id = "mytable";
+  //table.classList.add("table", "table-sm","border","border-2","border-dark");
 
   title.innerText = "Table-View";
   thead1.innerText = "Firstname";
@@ -99,7 +100,7 @@ myform.addEventListener("submit", (e) => {
   );
   tbody.append(trow2);
   table.append(thead, tbody);
-  parentdiv.append(title, table);
+  //parentdiv.append(title, table);
 
   myform.reset();
 });
