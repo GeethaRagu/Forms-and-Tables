@@ -1,31 +1,51 @@
 
-    const form = document.getElementById('myForm');
 
-    // Add an event listener to the form's submit event
-    form.addEventListener('submit', function(e) {
-      // Prevent the form from submitting
-      e.preventDefault();
+const form = document.getElementById('myForm');
+form.addEventListener("submit", ((event)=> {
+  event.preventDefault();
+  const fName = form.elements['first-name'].value;
 
-      // Get the values from the form
-      const fname = form.elements['first-name'].value;
-      const lname = form.elements['last-name'].value;
+  
+  const lName = form.elements['last-name'].value;
+  const addr = form.elements['address'].value;
+  const pincode =form.elements['pincode'].value;
+ 
 
-      //Create a new table row
-      const row = document.createElement('tr');
+  const state = form.elements['state'].value;
+  const country = form.elements['country'].value;
 
-      // Create a new table cell for the name
-      const nameCell = document.createElement('td');
-      nameCell.textContent = fname;
+  document.getElementById("inputfname").innerHTML = fName;
+  document.getElementById("inputlname").innerHTML = lName;
+  document.getElementById("inputaddress").innerHTML = addr;
+  document.getElementById("inputpincode").innerHTML = pincode;
+  
+  document.getElementById("inputstate").innerText = state;
+  document.getElementById("inputcountry").innerText = country;
 
-      // Create a new table cell for the age
-      const ageCell = document.createElement('td');
-      ageCell.textContent = lname;
+  if(document.getElementById("male").checked===true){
+    document.getElementById("inputgender").innerText = "Male";
+    document.getElementById("male").checked = 0;
+  }
+  else{
+    document.getElementById("inputgender").innerText = "Female";
+    document.getElementById("female").checked =0;
+  }
+  let checkboxes = document.getElementsByName("food");
+  let result = "";
+  for (var i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      result += checkboxes[i].value + " ";
+    }
+  }
+  let r1 = result.split(" ");
+  if(r1.length<3){
+    alert("Kinldy choose atleast two favourite items")
+  }
+  else
+  document.getElementById("inputfood").innerText = result;
 
-      // Append the table cells to the table row
-      row.appendChild(nameCell);
-      row.appendChild(ageCell);
 
-      // Append the table row to the table body
-      document.getElementById('myTable').tBodies[0].appendChild(row);
-      //document.getElementById("inputfname").textContent = fname;
-    });
+ 
+}));
+
+
