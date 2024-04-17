@@ -10,22 +10,22 @@
       const fname = form.elements['first-name'].value;
       const lname = form.elements['last-name'].value;
 
-      /* Create a new table row
+      //Create a new table row
       const row = document.createElement('tr');
 
       // Create a new table cell for the name
       const nameCell = document.createElement('td');
-      nameCell.textContent = name;
+      nameCell.textContent = fname;
 
       // Create a new table cell for the age
       const ageCell = document.createElement('td');
-      ageCell.textContent = age;
+      ageCell.textContent = lname;
 
       // Append the table cells to the table row
       row.appendChild(nameCell);
       row.appendChild(ageCell);
 
       // Append the table row to the table body
-      document.getElementById('myTable').tBodies[0].appendChild(row);*/
-      document.getElementById("inputfname").textContent = fname;
+      document.getElementById('myTable').tBodies[0].appendChild(row);
+      //document.getElementById("inputfname").textContent = fname;
     });
