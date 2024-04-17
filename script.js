@@ -1,7 +1,7 @@
 const submit = document.getElementById("submit");
 const reset = document.getElementById("reset");
 
-submit.addEventListener("click", function (event) {
+document.getElementById("form").addEventListener("submit", function (event) {
   event.preventDefault();
   const fName = document.getElementById("first-name").value;
   const lName = document.getElementById("last-name").value;
@@ -42,7 +42,7 @@ submit.addEventListener("click", function (event) {
   else
   document.getElementById("inputfood").innerText = result;
 
-  document.getElementById("first-name").value = "";
+  /*document.getElementById("first-name").value = "";
   document.getElementById("last-name").value = "";
   document.getElementById("address").value = "";
   document.getElementById("pincode").value = "";
@@ -54,10 +54,10 @@ submit.addEventListener("click", function (event) {
   document.getElementById("check2").checked = 0;
   document.getElementById("check3").checked = 0;
   document.getElementById("check4").checked = 0;
-  document.getElementById("check5").checked = 0;
- 
+  document.getElementById("check5").checked = 0;*/
+  document.getElementById("form").reset();
 });
-
+/*
 reset.addEventListener("click", function () {
   document.getElementById("first-name").value = "";
   document.getElementById("last-name").value = "";
@@ -72,4 +72,4 @@ reset.addEventListener("click", function () {
   document.getElementById("check5").checked = 0;
   document.getElementById("male").checked = 0;
   document.getElementById("female").checked = 0;
-});
+});*/
