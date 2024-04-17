@@ -4,15 +4,15 @@ const form = document.getElementById("form");
 
 form.addEventListener("submit", ((event)=> {
   event.preventDefault();
- 
-  const fName = document.getElementById("first-name").value;
-  const lName = document.getElementById("last-name").value;
-  const addr = document.getElementById("address").value;
-  const pincode = document.getElementById("pincode").value;
+  document.getElementById("inputfname").innerHTML = document.getElementById("first-name").value;
+  /*const fName = document.getElementsByName("firstname").value;
+  const lName = document.getElementsByName("lastname").value;
+  const addr = document.getElementsByName("address").value;
+  const pincode = document.getElementsByName("pincode").value;
  
 
-  const state = document.getElementById("state").value;
-  const country = document.getElementById("country").value;
+  const state = document.getElementsByName("state").value;
+  const country = document.getElementsByName("country").value;
 
   document.getElementById("inputfname").innerHTML = fName;
   document.getElementById("inputlname").innerHTML = lName;
@@ -20,7 +20,7 @@ form.addEventListener("submit", ((event)=> {
   document.getElementById("inputpincode").innerHTML = pincode;
   
   document.getElementById("inputstate").innerText = state;
-  document.getElementById("inputcountry").innerText = country;
+  document.getElementById("inputcountry").innerText = country;*/
 
   if(document.getElementById("male").checked===true){
     document.getElementById("inputgender").innerText = "Male";
