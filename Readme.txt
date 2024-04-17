@@ -1,1 +1,1 @@
-DOM form manipulation and tables
+DOM form manipulation and table
