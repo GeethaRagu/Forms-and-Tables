@@ -1,8 +1,10 @@
 const submit = document.getElementById("submit");
 const reset = document.getElementById("reset");
+const form = document.getElementById("form");
 
-document.getElementById("form").addEventListener("submit", function (event) {
+form.addEventListener("submit", ((event)=> {
   event.preventDefault();
+ 
   const fName = document.getElementById("first-name").value;
   const lName = document.getElementById("last-name").value;
   const addr = document.getElementById("address").value;
@@ -12,10 +14,10 @@ document.getElementById("form").addEventListener("submit", function (event) {
   const state = document.getElementById("state").value;
   const country = document.getElementById("country").value;
 
-  document.getElementById("inputfname").innerText = fName;
-  document.getElementById("inputlname").innerText = lName;
-  document.getElementById("inputaddress").innerText = addr;
-  document.getElementById("inputpincode").innerText = pincode;
+  document.getElementById("inputfname").innerHTML = fName;
+  document.getElementById("inputlname").innerHTML = lName;
+  document.getElementById("inputaddress").innerHTML = addr;
+  document.getElementById("inputpincode").innerHTML = pincode;
   
   document.getElementById("inputstate").innerText = state;
   document.getElementById("inputcountry").innerText = country;
@@ -55,21 +57,10 @@ document.getElementById("form").addEventListener("submit", function (event) {
   document.getElementById("check3").checked = 0;
   document.getElementById("check4").checked = 0;
   document.getElementById("check5").checked = 0;*/
-  document.getElementById("form").reset();
-});
-/*
+ 
+}));
+
+
 reset.addEventListener("click", function () {
-  document.getElementById("first-name").value = "";
-  document.getElementById("last-name").value = "";
-  document.getElementById("address").value = "";
-  document.getElementById("pincode").value = "";
-  document.getElementById("state").value = "";
-  document.getElementById("country").value = "";
-  document.getElementById("check1").checked = 0;
-  document.getElementById("check2").checked = 0;
-  document.getElementById("check3").checked = 0;
-  document.getElementById("check4").checked = 0;
-  document.getElementById("check5").checked = 0;
-  document.getElementById("male").checked = 0;
-  document.getElementById("female").checked = 0;
-});*/
+  form.reset();
+});
