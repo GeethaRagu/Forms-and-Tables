@@ -37,7 +37,9 @@
             <h2>Input Form</h2>
             <form id="form">
               <div class="mb-3 form-group">
-                <label for="first-name" class="form-label fw-bold">First Name:</label>
+                <label for="first-name" class="form-label fw-bold"
+                  >First Name:</label
+                >
                 <input
                   type="text"
                   class="form-control"
@@ -48,7 +50,9 @@
                 />
               </div>
               <div class="mb-3 form-group">
-                <label for="last-name" class="form-label fw-bold">Last Name:</label>
+                <label for="last-name" class="form-label fw-bold"
+                  >Last Name:</label
+                >
                 <input
                   type="text"
                   class="form-control"
@@ -80,25 +84,27 @@
                 />
               </div>
               <div class="mb-3 form-group">
-                <label for="gender" class="form-label fw-bold">Gender:</label>
-                <p>
-                  <label for="male">Male</label>
+                <label for="gender" class="form-label fw-bold">Gender:</label>&nbsp;&nbsp;
+                <span>
                   <input type="radio" name="gender" id="male" value="Male" />
-                </p>
-                <p>
-                  <label for="demale">Female</label>
+                  <label for="male">Male</label> </span
+                >&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>
                   <input
                     type="radio"
                     name="gender"
                     id="female"
                     value="Female"
                   />
-                </p>
+                  <label for="female">Female</label>
+                </span>
               </div>
               <div class="mb-3 form-group">
-                <label for="foodlist" class="form-label fw-bold">Favourite Food:</label>
-                <p>
-                  <label for="check1">Idly</label>
+                <label for="foodlist" class="form-label fw-bold"
+                  >Favourite Food:</label
+                >&nbsp;
+                <span>
+                  
                   <input
                     type="checkbox"
                     name="food"
@@ -106,9 +112,10 @@
                     value="Idly"
                     class="foodlist"
                   />
-                </p>
-                <p>
-                  <label for="check2">Dosai</label>
+                  <label for="check1">Idly</label>
+                </span>&nbsp;
+                <span>
+                 
                   <input
                     type="checkbox"
                     name="food"
@@ -116,9 +123,10 @@
                     value="Dosai"
                     class="foodlist"
                   />
-                </p>
-                <p>
-                  <label for="check3">Briyani</label>
+                  <label for="check2">Dosai</label>
+                </span>&nbsp;
+                <span>
+                  
                   <input
                     type="checkbox"
                     name="food"
@@ -126,9 +134,10 @@
                     value="Briyani"
                     class="foodlist"
                   />
-                </p>
-                <p>
-                  <label for="check4">Appam</label>
+                  <label for="check3">Briyani</label>
+                </span>&nbsp;
+                <span>
+                  
                   <input
                     type="checkbox"
                     name="food"
@@ -136,9 +145,10 @@
                     value="Appam"
                     class="foodlist"
                   />
-                </p>
-                <p>
-                  <label for="check5">Chappati</label>
+                  <label for="check4">Appam</label>
+                </span>&nbsp;
+                <span>
+                  
                   <input
                     type="checkbox"
                     name="food"
@@ -146,7 +156,8 @@
                     value="Chappati"
                     class="foodlist"
                   />
-                </p>
+                  <label for="check5">Chappati</label>
+                </span>
               </div>
               <div class="mb-3 form-group">
                 <label for="state" class="form-label fw-bold">State:</label>
@@ -168,16 +179,26 @@
                   placeholder="Enter your country"
                 />
               </div>
-              <button type="submit" value="Submit" id="submit" class="btn btn-primary">Submit</button>
+              <button
+                type="submit"
+                value="Submit"
+                id="submit"
+                class="btn btn-primary"
+              >
+                Submit
+              </button>
             </form>
           </div>
         </div>
         <div class="row">
           <div class="col-12 col-md-6 mt-3" id="tableview">
-            <h5 id="tabletitle">You can view the inputs entered after submitting the form</h5>
-             <table id="mytable" class="table table-sm border border-2 border-dark">
-                
-             </table>
+            <h5 id="tabletitle">
+              You can view the inputs entered after submitting the form
+            </h5>
+            <table
+              id="mytable"
+              class="table table-sm border border-2 border-dark"
+            ></table>
           </div>
         </div>
       </div>
