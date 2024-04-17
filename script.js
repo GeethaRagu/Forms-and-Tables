@@ -27,5 +27,5 @@
 
       // Append the table row to the table body
       document.getElementById('myTable').tBodies[0].appendChild(row);*/
-      document.getElementById("inputfname").innerText = fname;
+      document.getElementById("inputfname").textContent = fname;
     });
