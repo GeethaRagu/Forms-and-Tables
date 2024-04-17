@@ -13,7 +13,8 @@ myform.addEventListener("submit", (e) => {
 
   //const parentdiv = document.getElementById("tableview");
   const table = document.getElementById("mytable");
-  const title = document.createElement("h2");
+  const title=  document.getElementById("tabletitle");
+  //const title = document.createElement("h2");
   //const table = document.createElement("table");
   const thead = document.createElement("thead");
   const tbody = document.createElement("tbody");
@@ -40,6 +41,7 @@ myform.addEventListener("submit", (e) => {
   //table.classList.add("table", "table-sm","border","border-2","border-dark");
 
   title.innerText = "Table-View";
+
   thead1.innerText = "Firstname";
   thead2.innerText = "Lastname";
   thead3.innerText = "Address";
@@ -67,12 +69,9 @@ myform.addEventListener("submit", (e) => {
       result += checkboxes[i].value + " ";
     }
   }
-  let r1 = result.split(" ");
-  if (r1.length < 3) {
-    alert("Kinldy choose atleast two favourite items");
-    table.setAttribute("style", "display:none");
-    title.setAttribute("style", "display:none");
-  } else tdata6.innerText = result;
+
+    tdata6.innerText = result;
+  
 
   tdata7.innerText = state;
   tdata8.innerText = country;
@@ -100,7 +99,8 @@ myform.addEventListener("submit", (e) => {
   );
   tbody.append(trow2);
   table.append(thead, tbody);
-  //parentdiv.append(title, table);
+
+  //parentdiv.append(title);
 
   myform.reset();
 });
