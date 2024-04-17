@@ -25,18 +25,25 @@ myform.addEventListener("submit", (e) => {
     document.getElementById("error").innerText = "Select atleast two favourite food";
   } else {
     document.getElementById("error").setAttribute("style","display:none")
-    const thead = document.createElement("thead");
+  
     const tbody = document.createElement("tbody");
     const trow1 = document.createElement("tr");
-    const thead1 = document.createElement("th");
-    const thead2 = document.createElement("th");
-    const thead3 = document.createElement("th");
-    const thead4 = document.createElement("th");
-    const thead5 = document.createElement("th");
-    const thead6 = document.createElement("th");
-    const thead7 = document.createElement("th");
-    const thead8 = document.createElement("th");
     const trow2 = document.createElement("tr");
+    const trow3 = document.createElement("tr");
+    const trow4 = document.createElement("tr");
+    const trow5 = document.createElement("tr");
+    const trow6 = document.createElement("tr");
+    const trow7 = document.createElement("tr");
+    const trow8 = document.createElement("tr");
+    const thead1 = document.createElement("td");
+    const thead2 = document.createElement("td");
+    const thead3 = document.createElement("td");
+    const thead4 = document.createElement("td");
+    const thead5 = document.createElement("td");
+    const thead6 = document.createElement("td");
+    const thead7 = document.createElement("td");
+    const thead8 = document.createElement("td");
+  
     const tdata1 = document.createElement("td");
     const tdata2 = document.createElement("td");
     const tdata3 = document.createElement("td");
@@ -55,7 +62,8 @@ myform.addEventListener("submit", (e) => {
     thead6.innerText = "Favourite Food";
     thead7.innerText = "State";
     thead8.innerText = "Country";
-
+    
+    tbody.classList.add("border","border-2","border-dark");
     tdata1.innerText = fname;
     tdata2.innerText = lname;
     tdata3.innerText = address;
@@ -69,29 +77,16 @@ myform.addEventListener("submit", (e) => {
     tdata6.innerText = result;
     tdata7.innerText = state;
     tdata8.innerText = country;
-    trow1.append(
-      thead1,
-      thead2,
-      thead3,
-      thead4,
-      thead5,
-      thead6,
-      thead7,
-      thead8
-    );
-    thead.append(trow1);
-    trow2.append(
-      tdata1,
-      tdata2,
-      tdata3,
-      tdata4,
-      tdata5,
-      tdata6,
-      tdata7,
-      tdata8
-    );
-    tbody.append(trow2);
-    table.append(thead, tbody);
+    trow1.append(thead1,tdata1);
+    trow2.append(thead2,tdata2);
+    trow3.append(thead3,tdata3);
+    trow4.append(thead4,tdata4);
+    trow5.append(thead5,tdata5);
+    trow6.append(thead6,tdata6);
+    trow7.append(thead7,tdata7);
+    trow8.append(thead8,tdata8);
+    tbody.append(trow1,trow2,trow3,trow4,trow5,trow6,trow7,trow8);
+    table.append(tbody);
   }
 
   myform.reset();
